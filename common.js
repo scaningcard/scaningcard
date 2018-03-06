@@ -31,6 +31,12 @@
                 if (document.getElementById('iframe').contentWindow.document.getElementById('agentManInput')) {
                     document.getElementById('iframe').contentWindow.document.getElementById('agentManInput').removeAttribute('readonly');
                 }
+                if (document.getElementById('iframe').contentWindow.document.getElementById('agentManIdentityInput')) {
+                    document.getElementById('iframe').contentWindow.document.getElementById('agentManIdentityInput').removeAttribute('readonly');
+                }
+                if (document.getElementById('iframe').contentWindow.document.getElementById('agentManAddressInput')) {
+                    document.getElementById('iframe').contentWindow.document.getElementById('agentManAddressInput').removeAttribute('readonly');
+                }
             }
         });
     document.getElementById('btnQuery').addEventListener('click',
