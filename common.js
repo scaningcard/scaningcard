@@ -19,10 +19,18 @@
                     obj.contentWindow.InstInfoSafe.clearEncode = function () { };
                 });
             } else if (e.target.className == 'head') {
-                document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operator').removeAttribute('readonly');
-                document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorCard').removeAttribute('readonly');
-                document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorAddr').removeAttribute('readonly');
-                document.getElementById('iframe').contentWindow.document.getElementById('agentManInput').removeAttribute('readonly');
+                if (document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operator')) {
+                    document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operator').removeAttribute('readonly');
+                }
+                if (document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorCard')) {
+                    document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorCard').removeAttribute('readonly');
+                }
+                if (document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorAddr')) {
+                    document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorAddr').removeAttribute('readonly');
+                }
+                if (document.getElementById('iframe').contentWindow.document.getElementById('agentManInput')) {
+                    document.getElementById('iframe').contentWindow.document.getElementById('agentManInput').removeAttribute('readonly');
+                }
             }
         });
     document.getElementById('btnQuery').addEventListener('click',
