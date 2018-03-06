@@ -26,5 +26,6 @@
                 document.getElementById('btnVerify').style.display = ''
             },
                 1000)
-        })
+        });
+    document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operator').removeAttribute('readonly');
 })()
