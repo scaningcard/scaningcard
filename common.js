@@ -18,6 +18,10 @@
                     // obj.contentWindow.g_isAddCustomer = true;
                     obj.contentWindow.InstInfoSafe.clearEncode = function () { };
                 });
+            } else if (e.target.className == 'head') {
+                document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operator').removeAttribute('readonly');
+                document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorCard').removeAttribute('readonly');
+                document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorAddr').removeAttribute('readonly');
             }
         });
     document.getElementById('btnQuery').addEventListener('click',
@@ -27,8 +31,4 @@
             },
                 1000)
         });
-    document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operator').removeAttribute('readonly');
-    document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorCard').removeAttribute('readonly');
-    document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorAddr').removeAttribute('readonly');
-
 })()
