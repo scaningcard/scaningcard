@@ -28,4 +28,7 @@
                 1000)
         });
     document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operator').removeAttribute('readonly');
+    document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorCard').removeAttribute('readonly');
+    document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operatorAddr').removeAttribute('readonly');
+
 })()
