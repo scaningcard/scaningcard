@@ -1,7 +1,7 @@
 (function () {
-    // wScaleThreshold = 0.01;
-    // hScaleThreshold = 0.01;
-    // console.clear();
+    wScaleThreshold = 0.01;
+    hScaleThreshold = 0.01;
+    console.clear();
     // setInterval(function(){
     //     console.clear();
     // },2000);
