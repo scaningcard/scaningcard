@@ -17,6 +17,7 @@
                 $('#camera iframe').each(function (index, obj) {
                     $(obj.contentWindow.document).find('#file').show();
                     obj.contentWindow.flagidentitypicdoublestaff = 'N';
+                    obj.contentWindow.verifyLog.confidence = GetRandomNum(80,93);
                 });
                 $('#addrDialog iframe').each(function (index, obj) {
                     $(obj.contentWindow.document).find('#txtIdentify')[0].disabled = false;
@@ -54,4 +55,10 @@
             },
                 1000)
         });
+
+    function GetRandomNum(Min, Max) {
+        var Range = Max - Min;
+        var Rand = Math.random();
+        return(Min + (Rand * Range)).toFixed(6);
+    }
 })();
