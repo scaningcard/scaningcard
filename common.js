@@ -1,13 +1,12 @@
 (function () {
     custnum.onclick = function () {
-        console.clear();
         iframe.contentWindow.document.querySelector('iframe').contentWindow.txtIdentify.disabled = false;
         iframe.contentWindow.document.querySelector('iframe').contentWindow.flagDate = true
     };
     document.querySelector('body').addEventListener('click',
         function (e) {
-            console.clear();
             if (e.target.className == 'window_bg') {
+                console.clear();
                 $('#camera iframe').each(function (index, obj) {
                     $(obj.contentWindow.document).find('#file').show();
                     obj.contentWindow.flagidentitypicdoublestaff = 'N';
@@ -43,7 +42,6 @@
         });
     document.getElementById('btnQuery').addEventListener('click',
         function () {
-            console.clear();
             setTimeout(function () {
                 document.getElementById('btnVerify').style.display = ''
             },
@@ -56,4 +54,4 @@
     //     console.clear();
     // },2000);
     // console.log = function(){};
-})()
+})();
