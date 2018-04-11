@@ -47,7 +47,7 @@
                 1000)
         });
     console.log = function(){};
-    wScaleThreshold = 0.01;
-    hScaleThreshold = 0.01;
-    alert("插件调用成功");
+    // wScaleThreshold = 0.01;
+    // hScaleThreshold = 0.01;
+    alert(wScaleThreshold,hScaleThreshold);
 })()
