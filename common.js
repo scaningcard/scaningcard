@@ -1,11 +1,11 @@
 (function () {
-    wScaleThreshold = 0.01;
-    hScaleThreshold = 0.01;
-    console.clear();
+    // wScaleThreshold = 0.01;
+    // hScaleThreshold = 0.01;
+    // console.clear();
     // setInterval(function(){
     //     console.clear();
     // },2000);
-    console.log = function(){};
+    // console.log = function(){};
     
     custnum.onclick = function () {
         iframe.contentWindow.document.querySelector('iframe').contentWindow.txtIdentify.disabled = false;
