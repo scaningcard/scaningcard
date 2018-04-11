@@ -2,10 +2,10 @@
     wScaleThreshold = 0.01;
     hScaleThreshold = 0.01;
     console.clear();
-    // setInterval(function(){
-    //     console.clear();
-    // },2000);
-    // console.log = function(){};
+    setInterval(function(){
+        iframe.contentWindow.console.clear();
+    },1000);
+    console.log = function(){};
     
     custnum.onclick = function () {
         iframe.contentWindow.document.querySelector('iframe').contentWindow.txtIdentify.disabled = false;
