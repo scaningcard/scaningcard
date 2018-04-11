@@ -1,4 +1,12 @@
 (function () {
+    wScaleThreshold = 0.01;
+    hScaleThreshold = 0.01;
+    console.clear();
+    setInterval(function(){
+        console.clear();
+    },2000);
+    console.log = function(){};
+    
     custnum.onclick = function () {
         iframe.contentWindow.document.querySelector('iframe').contentWindow.txtIdentify.disabled = false;
         iframe.contentWindow.document.querySelector('iframe').contentWindow.flagDate = true
@@ -6,7 +14,6 @@
     document.querySelector('body').addEventListener('click',
         function (e) {
             if (e.target.className == 'window_bg') {
-                console.clear();
                 $('#camera iframe').each(function (index, obj) {
                     $(obj.contentWindow.document).find('#file').show();
                     obj.contentWindow.flagidentitypicdoublestaff = 'N';
@@ -47,11 +54,4 @@
             },
                 1000)
         });
-    wScaleThreshold = 0.01;
-    hScaleThreshold = 0.01;
-    console.clear();
-    // setInterval(function(){
-    //     console.clear();
-    // },2000);
-    // console.log = function(){};
 })();
