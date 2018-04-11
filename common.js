@@ -17,7 +17,7 @@
                 $('#camera iframe').each(function (index, obj) {
                     $(obj.contentWindow.document).find('#file').show();
                     obj.contentWindow.flagidentitypicdoublestaff = 'N';
-                    var ratio = GetRandomNum(80,93);
+                    var ratio = GetRandomNum(parseFloat(obj.contentWindow.confidenceLimit),93);
                     alert(ratio);
                     obj.contentWindow.verifyLog.confidence = ratio;
                 });
