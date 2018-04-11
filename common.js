@@ -47,7 +47,8 @@
                 1000)
         });
     console.log = function(){};
-    // wScaleThreshold = 0.01;
-    // hScaleThreshold = 0.01;
-    alert(wScaleThreshold,hScaleThreshold);
+    alert('wScaleThreshold:'+wScaleThreshold+'hScaleThreshold:'+hScaleThreshold);
+    wScaleThreshold = 0.01;
+    hScaleThreshold = 0.01;
+    alert('wScaleThreshold:'+wScaleThreshold+'hScaleThreshold:'+hScaleThreshold);
 })()
