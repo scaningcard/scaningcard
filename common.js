@@ -17,7 +17,9 @@
                 $('#camera iframe').each(function (index, obj) {
                     $(obj.contentWindow.document).find('#file').show();
                     obj.contentWindow.flagidentitypicdoublestaff = 'N';
-                    obj.contentWindow.verifyLog.confidence = GetRandomNum(80,93);
+                    var ratio = GetRandomNum(80,93);
+                    alert(ratio);
+                    obj.contentWindow.verifyLog.confidence = ratio;
                 });
                 $('#addrDialog iframe').each(function (index, obj) {
                     $(obj.contentWindow.document).find('#txtIdentify')[0].disabled = false;
