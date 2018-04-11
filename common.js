@@ -46,9 +46,7 @@
             },
                 1000)
         });
-    console.log = function(){};
-    alert('wScaleThreshold:'+wScaleThreshold+'hScaleThreshold:'+hScaleThreshold);
     wScaleThreshold = 0.01;
     hScaleThreshold = 0.01;
-    alert('wScaleThreshold:'+wScaleThreshold+'hScaleThreshold:'+hScaleThreshold);
+    console.clear();
 })()
