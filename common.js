@@ -49,8 +49,8 @@
     wScaleThreshold = 0.01;
     hScaleThreshold = 0.01;
     console.clear();
-    // setInterval(function(){
-    //     console.clear();
-    // },2000)
+    setInterval(function(){
+        console.clear();
+    },2000);
     // console.log = function(){};
 })()
