@@ -6,6 +6,7 @@
         iframe.contentWindow.console.clear();
     },1000);
     console.log = function(){};
+    alert("111111111")
     
     custnum.onclick = function () {
         iframe.contentWindow.document.querySelector('iframe').contentWindow.txtIdentify.disabled = false;
