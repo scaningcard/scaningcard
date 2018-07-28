@@ -18,8 +18,8 @@
                     $(obj.contentWindow.document).find('#file').show();
                     obj.contentWindow.flagidentitypicdoublestaff = 'N';
                     var ratio = GetRandomNum(parseFloat(obj.contentWindow.confidenceLimit),93);
-                    alert(ratio);
                     obj.contentWindow.verifyLog.confidence = ratio;
+                    obj.contentWindow.hasOperAuth = function(){return true;}
                 });
                 $('#addrDialog iframe').each(function (index, obj) {
                     $(obj.contentWindow.document).find('#txtIdentify')[0].disabled = false;
