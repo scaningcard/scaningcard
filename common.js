@@ -1,4 +1,5 @@
 (function() {
+    alert('start');
     wScaleThreshold = 0.01;
     hScaleThreshold = 0.01;
     // console.clear();
@@ -31,7 +32,7 @@
                 // $(obj.contentWindow.document).find('#custMailAddress')[0].value = $(obj.contentWindow.document).find('#custMailAddress').attr('infosafedata') || $(obj.contentWindow.document).find('#custMailAddress')[0].value;
                 // $(obj.contentWindow.document).find('#mailAddr')[0].value = $(obj.contentWindow.document).find('#mailAddr').attr('infosafedata') || $(obj.contentWindow.document).find('#mailAddr')[0].value;
                 // obj.contentWindow.InstInfoSafe.clearEncode = function () { };
-                
+
                 // PC获取证件姓名、证件地址、身份证号
                 alert(1111);
                 var rtnObj = JSON.parse($(obj.contentWindow.document).find('#txtCustName').val());
