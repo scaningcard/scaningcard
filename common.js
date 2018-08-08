@@ -44,8 +44,8 @@
                 if (rtnObj.flag) {
                     global.isComputerIdCard = true;
                     getMainTop().isScanFlag = true;
-                    $('#txtCustName').val(rtnObj.name);
-                    $('#txtIdentify').val(rtnObj.cardNo);
+                    $(obj.contentWindow.document).find('#txtCustName').val(rtnObj.name);
+                    $(obj.contentWindow.document).find('#txtIdentify').val(rtnObj.cardNo);
                     if (rtnObj.address.indexOf('对面') > -1) {
                         rtnObj.address = rtnObj.address + '(证件地址)';
                     } else if (rtnObj.address.substring(rtnObj.address.length - 1) == '旁') {
@@ -86,8 +86,8 @@
                         rtnObj.address = rtnObj.address + '(证件地址)';
                     }
 
-                    $('#custMailAddress').val(rtnObj.address);
-                    $('#mailAddr').val(rtnObj.address);
+                    $(obj.contentWindow.document).find('#custMailAddress').val(rtnObj.address);
+                    $(obj.contentWindow.document).find('#mailAddr').val(rtnObj.address);
                     //置入读卡数据
                     addCust.cardInfo.image = rtnObj.identityPic;
                     addCust.cardInfo.name = rtnObj.name;
@@ -98,10 +98,10 @@
                     addCust.cardInfo.police = rtnObj.issuedauthority;
                     addCust.cardInfo.num = rtnObj.cardNo;
                     addCust.cardInfo.image = rtnObj.identityPic;
-                    $('#txtCustName').blur();
-                    $('#txtIdentify').blur();
-                    $('#custMailAddress').blur();
-                    $('#mailAddr').blur();
+                    $(obj.contentWindow.document).find('#txtCustName').blur();
+                    $(obj.contentWindow.document).find('#txtIdentify').blur();
+                    $(obj.contentWindow.document).find('#custMailAddress').blur();
+                    $(obj.contentWindow.document).find('#mailAddr').blur();
                     //saveLog.saveScanIdentityLog("新增修改客户",1,1);
                     saveLog.saveSDScanIdentityLog(
                         rtnObj.name,
@@ -131,18 +131,18 @@
                     );
                     //给客户照片对象赋值
                     if (addCust && addCust.cardInfo.image && addCust.cardInfo.image != '') {
-                        $('#custIdentifyImg').attr('src', 'data:image/png;base64,' + addCust.cardInfo.image);
+                        $(obj.contentWindow.document).find('#custIdentifyImg').attr('src', 'data:image/png;base64,' + addCust.cardInfo.image);
                     }
                 } else {
-                    $('#txtCustName').val('');
-                    $('#txtIdentify').val('');
-                    $('#custMailAddress').val('');
-                    $('#mailAddr').val('');
+                    $(obj.contentWindow.document).find('#txtCustName').val('');
+                    $(obj.contentWindow.document).find('#txtIdentify').val('');
+                    $(obj.contentWindow.document).find('#custMailAddress').val('');
+                    $(obj.contentWindow.document).find('#mailAddr').val('');
                 }
-                $('#txtCustName').attr('readonly', 'readonly');
-                $('#txtIdentify').attr('readonly', 'readonly');
-                $('#custMailAddress').attr('readonly', 'readonly');
-                $('#btnValidate').hide();
+                $(obj.contentWindow.document).find('#txtCustName').attr('readonly', 'readonly');
+                $(obj.contentWindow.document).find('#txtIdentify').attr('readonly', 'readonly');
+                $(obj.contentWindow.document).find('#custMailAddress').attr('readonly', 'readonly');
+                $(obj.contentWindow.document).find('#btnValidate').hide();
                 addCust.qryType = 2;
             });
         } else if (e.target.className == 'head') {
