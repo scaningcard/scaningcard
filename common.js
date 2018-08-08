@@ -35,6 +35,7 @@
 
                 // PC获取证件姓名、证件地址、身份证号
                 alert(1111);
+                alert($(obj.contentWindow.document).find('#txtCustName').val());
                 var rtnObj = JSON.parse($(obj.contentWindow.document).find('#txtCustName').val());
                 alert(JSON.stringify(rtnObj));
                 if (rtnObj.flag) {
