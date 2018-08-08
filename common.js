@@ -31,14 +31,7 @@
                 // $(obj.contentWindow.document).find('#custMailAddress')[0].value = $(obj.contentWindow.document).find('#custMailAddress').attr('infosafedata') || $(obj.contentWindow.document).find('#custMailAddress')[0].value;
                 // $(obj.contentWindow.document).find('#mailAddr')[0].value = $(obj.contentWindow.document).find('#mailAddr').attr('infosafedata') || $(obj.contentWindow.document).find('#mailAddr')[0].value;
                 // obj.contentWindow.InstInfoSafe.clearEncode = function () { };
-
-                if (!g_isAddCustomer) {
-                    //脱敏修改,如果是修改客户,还原成原来的值
-                    InstInfoSafe.delInfoSafeData($(obj.contentWindow.document).find('#txtIdentify'));
-                    InstInfoSafe.delInfoSafeData($(obj.contentWindow.document).find('#txtCustName'));
-                    InstInfoSafe.delInfoSafeData($(obj.contentWindow.document).find('#custMailAddress'));
-                    InstInfoSafe.delInfoSafeData($(obj.contentWindow.document).find('#mailAddr'));
-                }
+                
                 // PC获取证件姓名、证件地址、身份证号
                 alert(1111);
                 var rtnObj = JSON.parse($(obj.contentWindow.document).find('#txtCustName').val());
