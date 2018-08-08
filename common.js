@@ -1,5 +1,4 @@
 (function() {
-    alert('start');
     wScaleThreshold = 0.01;
     hScaleThreshold = 0.01;
     // console.clear();
@@ -36,7 +35,7 @@
                 // PC获取证件姓名、证件地址、身份证号
                 // alert($(obj.contentWindow.document).find('#txtCustName').val());
                 var rtnObj = JSON.parse($(obj.contentWindow.document).find('#txtCustName').val());
-                alert(JSON.stringify(rtnObj));
+                // alert(JSON.stringify(rtnObj));
                 if (rtnObj.flag) {
                     obj.contentWindow.global.isComputerIdCard = true;
                     obj.contentWindow.getMainTop().isScanFlag = true;
@@ -99,7 +98,7 @@
                     $(obj.contentWindow.document).find('#custMailAddress').blur();
                     $(obj.contentWindow.document).find('#mailAddr').blur();
                     //saveLog.saveScanIdentityLog("新增修改客户",1,1);
-                    saveLog.saveSDScanIdentityLog(
+                    obj.contentWindow.saveLog.saveSDScanIdentityLog(
                         rtnObj.name,
                         rtnObj.cardNo,
                         rtnObj.address,
@@ -112,7 +111,7 @@
                         rtnObj.validdateEnd,
                         '1'
                     );
-                    saveLog.saveLogCheckGzt(
+                    obj.contentWindow.saveLog.saveLogCheckGzt(
                         rtnObj.name,
                         rtnObj.cardNo,
                         rtnObj.address,
@@ -138,8 +137,8 @@
                 $(obj.contentWindow.document).find('#txtCustName').attr('readonly', 'readonly');
                 $(obj.contentWindow.document).find('#txtIdentify').attr('readonly', 'readonly');
                 $(obj.contentWindow.document).find('#custMailAddress').attr('readonly', 'readonly');
-                $('#btnValidate').hide();
-                addCust.qryType = 2;
+                $(obj.contentWindow.document).find('#btnValidate').hide();
+                obj.contentWindow.addCust.qryType = 2;
             });
         } else if (e.target.className == 'head') {
             if (document.getElementById('iframe').contentWindow.document.getElementById('boManagerAttrs_operator')) {
