@@ -34,15 +34,12 @@
                 // obj.contentWindow.InstInfoSafe.clearEncode = function () { };
 
                 // PC获取证件姓名、证件地址、身份证号
-                alert("3333");
-                alert("22222");
-                alert("4444");
                 // alert($(obj.contentWindow.document).find('#txtCustName').val());
                 var rtnObj = JSON.parse($(obj.contentWindow.document).find('#txtCustName').val());
                 alert(JSON.stringify(rtnObj));
                 if (rtnObj.flag) {
-                    global.isComputerIdCard = true;
-                    getMainTop().isScanFlag = true;
+                    obj.contentWindow.global.isComputerIdCard = true;
+                    obj.contentWindow.getMainTop().isScanFlag = true;
                     $(obj.contentWindow.document).find('#txtCustName').val(rtnObj.name);
                     $(obj.contentWindow.document).find('#txtIdentify').val(rtnObj.cardNo);
                     if (rtnObj.address.indexOf('对面') > -1) {
