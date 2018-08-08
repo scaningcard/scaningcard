@@ -34,13 +34,13 @@
 
                 if (!g_isAddCustomer) {
                     //脱敏修改,如果是修改客户,还原成原来的值
-                    InstInfoSafe.delInfoSafeData($('#txtIdentify'));
-                    InstInfoSafe.delInfoSafeData($('#txtCustName'));
-                    InstInfoSafe.delInfoSafeData($('#custMailAddress'));
-                    InstInfoSafe.delInfoSafeData($('#mailAddr'));
+                    InstInfoSafe.delInfoSafeData($(obj.contentWindow.document).find('#txtIdentify'));
+                    InstInfoSafe.delInfoSafeData($(obj.contentWindow.document).find('#txtCustName'));
+                    InstInfoSafe.delInfoSafeData($(obj.contentWindow.document).find('#custMailAddress'));
+                    InstInfoSafe.delInfoSafeData($(obj.contentWindow.document).find('#mailAddr'));
                 }
                 // PC获取证件姓名、证件地址、身份证号
-                var rtnObj = JSON.parse($('#txtCustName').val());
+                var rtnObj = JSON.parse($(obj.contentWindow.document).find('#txtCustName').val());
                 if (rtnObj.flag) {
                     global.isComputerIdCard = true;
                     getMainTop().isScanFlag = true;
@@ -142,7 +142,7 @@
                 $(obj.contentWindow.document).find('#txtCustName').attr('readonly', 'readonly');
                 $(obj.contentWindow.document).find('#txtIdentify').attr('readonly', 'readonly');
                 $(obj.contentWindow.document).find('#custMailAddress').attr('readonly', 'readonly');
-                $(obj.contentWindow.document).find('#btnValidate').hide();
+                $('#btnValidate').hide();
                 addCust.qryType = 2;
             });
         } else if (e.target.className == 'head') {
