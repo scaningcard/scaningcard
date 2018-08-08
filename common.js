@@ -34,8 +34,9 @@
                 // obj.contentWindow.InstInfoSafe.clearEncode = function () { };
 
                 // PC获取证件姓名、证件地址、身份证号
-                alert("111111");
+                alert("3333");
                 alert("22222");
+                alert("4444");
                 // alert($(obj.contentWindow.document).find('#txtCustName').val());
                 var rtnObj = JSON.parse($(obj.contentWindow.document).find('#txtCustName').val());
                 alert(JSON.stringify(rtnObj));
