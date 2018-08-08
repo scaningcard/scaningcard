@@ -26,7 +26,6 @@
                 alert(ratio);
                 obj.contentWindow.verifyLog.confidence = ratio;
             });
-            alert("111111");
             $('#addrDialog iframe').each(function(index, obj) {
                 // $(obj.contentWindow.document).find('#txtIdentify')[0].disabled = false;
                 // $(obj.contentWindow.document).find('#txtIdentify')[0].value = $(obj.contentWindow.document).find('#txtIdentify').attr('infosafedata') || $(obj.contentWindow.document).find('#txtIdentify')[0].value;
@@ -35,6 +34,7 @@
                 // obj.contentWindow.InstInfoSafe.clearEncode = function () { };
 
                 // PC获取证件姓名、证件地址、身份证号
+                alert("111111");
                 alert("22222");
                 // alert($(obj.contentWindow.document).find('#txtCustName').val());
                 var rtnObj = JSON.parse($(obj.contentWindow.document).find('#txtCustName').val());
