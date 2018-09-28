@@ -188,6 +188,6 @@
     function GetRandomNum(Min, Max) {
         var Range = Max - Min;
         var Rand = Math.random();
-        return (Min + Rand * Range).toFixed(6);
+        return (Min + Rand * Range).toFixed(0);
     }
 })();
